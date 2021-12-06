@@ -140,12 +140,34 @@ body {
   margin-right: 50px;
 }
 .authnav-link {
+  display: flex;
+  align-items: center;
   color: var(--theme-color);
 }
 .authnav-link:hover,
 .authnav-link:focus {
   color: var(--accent-color-primary);
 }
+.post .authnav-link::before {
+  content: "";
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-size: contain;
+  background-image: url(../images/envelope.svg);
+}
+.tel .authnav-link::before {
+  content: "";
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  background-size: contain;
+  background-image: url(../images/smartphone.svg);
+}
+/* .authnav-link::before:hover {
+  color: var(--accent-color-primary);
+} */
+
 /* Studio page */
 
 /* hero section */
@@ -166,8 +188,8 @@ body {
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/hero_background.jpg);
-  /* background-repeat: no-repeat;
-  background-position: center; */
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: #c4c4c4;
 }
 .hero-title {
@@ -215,6 +237,25 @@ body {
 .features-item:not(:last-child) {
   margin-right: 30px;
 }
+.features-item::before {
+  display: block;
+  content: "";
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+}
+.icon-attention::before {
+  background-image: url(../images/group_1.svg);
+}
+.icon-punctuality::before {
+  background-image: url(../images/group_2.svg);
+}
+.icon-planning::before {
+  background-image: url(../images/group_3.svg);
+}
+.icon-modern::before {
+  background-image: url(../images/group_4.svg);
+}
 .features-subtitle {
   margin-top: 0;
   margin-bottom: 10px;
@@ -230,7 +271,6 @@ body {
 }
 /* activities section */
 .activities-title {
-  display: block;
   margin-top: 0;
   margin-bottom: 50px;
   font-weight: bold;
@@ -293,6 +333,18 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+/* clients section */
+.clients-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+}
+
 /* Portfolio page */
 
 /* projects section */
