@@ -7,6 +7,8 @@
   --footer-links-color: rgba(255, 255, 255, 0.6);
 
   --font-bg-color: #ffffff;
+  --icon-color: #afb1b8;
+  --icon-bg-color: rgba(255, 255, 255, 0.1);
 
   --bg-color-primary: #e5e5e5;
   --bg-color-secondary: #f5f4fa;
@@ -149,9 +151,9 @@ body {
   color: var(--accent-color-primary);
 }
 .icon-post {
-  fill: currentColor;
   height: 16px;
   margin-right: 10px;
+  fill: currentColor;
 }
 
 /* Studio page */
@@ -308,53 +310,33 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.social-links {
+/* social links & icons*/
+.social-list {
   display: flex;
   justify-content: center;
-  /* margin-left: 32px;
-  margin-right: 32px; */
+}
+.social-item {
+  display: flex;
 }
 .social-item:not(:last-child) {
   margin-right: 10px;
 }
-.icon {
-  display: inline-flex;
+.social-link {
+  display: flex;
   width: 44px;
   height: 44px;
+  align-items: center;
+  justify-content: center;
   background-position: center;
   background-repeat: no-repeat;
-  align-items: center;
+  fill: var(--icon-color);
 }
-.instagram {
-  background-image: url(../images/instagram_2.svg);
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color-primary);
+  fill: var(--font-bg-color);
+  border-radius: 50%;
 }
-.twitter {
-  background-image: url(../images/twitter_1.svg);
-}
-.facebook {
-  background-image: url(../images/facebook_1.svg);
-}
-.linkedin {
-  background-image: url(../images/linkedin_1.svg);
-}
-
-.instagram:hover,
-.instagram:focus {
-  background-image: url(../images/instagram_2_hover.png);
-}
-/*
-.icon-twitter:hover,
-.icon-twitter:focus {
-  background-image: url(../images/instagram_2_hover.png);
-}
-.icon-facebook:hover,
-.icon-facebook:focus {
-  background-image: url(../images/instagram_2_hover.png);
-}
-.icon-linkedin:hover,
-.icon-linkedin:focus {
-  background-image: url(../images/instagram_2_hover.png);
-} */
 
 /* clients section */
 .clients-title {
@@ -370,45 +352,25 @@ body {
 .clients-list {
   display: flex;
 }
-.logo-first,
-.logo-second,
-.logo-third,
-.logo-fourth,
-.logo-fifth,
-.logo-sixth {
-  display: block;
+.logo-thumb {
+  display: flex;
   width: 170px;
   height: 92px;
+  justify-content: center;
   align-items: center;
   background-position: center;
   background-repeat: no-repeat;
+  fill: var(--icon-color);
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
 .client:not(:last-child) {
   margin-right: 30px;
 }
-.logo-first {
-  background-image: url(../images/logo_1.svg);
-}
-.logo-second {
-  background-image: url(../images/logo_2.svg);
-}
-.logo-third {
-  background-image: url(../images/logo_3.svg);
-}
-.logo-fourth {
-  background-image: url(../images/logo_4.svg);
-}
-.logo-fifth {
-  background-image: url(../images/logo_5.svg);
-}
-.logo-sixth {
-  background-image: url(../images/logo_6.svg);
-}
-.logo-first:hover,
-.logo-first:focus {
-  background-image: url(../images/instagram_2_hover.png);
+.logo-thumb:hover,
+.logo-thumb:focus {
+  fill: var(--accent-color-primary);
+  border: 1px solid var(--accent-color-primary);
 }
 
 /* Portfolio page */
@@ -455,6 +417,11 @@ body {
 .project-item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
 }
+.project-item:hover,
+.project-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .project-item .item-desc {
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
@@ -486,6 +453,10 @@ body {
   padding-bottom: 60px;
   background-color: var(--bg-color-add);
 }
+.footer-primery {
+  display: flex;
+  align-items: center;
+}
 .logo-item {
   display: inline-block;
   margin-right: 0;
@@ -493,6 +464,7 @@ body {
 }
 /* footer address */
 .footer-address {
+  min-width: 231px;
   margin-right: 70px;
   font-style: normal;
   font-size: 14px;
@@ -506,9 +478,7 @@ body {
 .footer-address .link {
   color: var(--footer-links-color);
 }
-.footer-primery {
-  display: flex;
-}
+/* Footer social links & icons */
 .social-footer h2 {
   margin-top: 0;
   margin-bottom: 20px;
@@ -519,16 +489,12 @@ body {
   text-transform: uppercase;
   color: var(--font-bg-color);
 }
-
-.footer-links {
-  display: flex;
-}
-.footer-links .icon {
-  color: var(--font-bg-color);
-  background-color: rgba(255, 255, 255, 0.1);
+.social-item .link-item {
+  background-color: var(--icon-bg-color);
+  fill: var(--font-bg-color);
   border-radius: 50%;
 }
-.footer-links .icon:hover,
-.footer-links .icon:focus {
+.social-item .link-item:hover,
+.social-item .link-item:focus {
   background-color: var(--accent-color-primary);
 }
