@@ -6,13 +6,14 @@
 
   --footer-links-color: rgba(255, 255, 255, 0.6);
 
-  --font-bg-color: #ffffff;
+  /* --font-bg-color: #ffffff; */
   --icon-color: #afb1b8;
   --icon-bg-color: rgba(255, 255, 255, 0.1);
 
-  --bg-color-primary: #e5e5e5;
+  --bg-color-primary: #ffffff;
   --bg-color-secondary: #f5f4fa;
-  --bg-color-add: #2f303a;
+  --bg-color-add: #e5e5e5;
+  --bg-color-dark: #2f303a;
 }
 
 /* remove bullets */
@@ -57,7 +58,7 @@ img {
   font-family: inherit;
   text-align: center;
   cursor: pointer;
-  color: var(--font-bg-color);
+  color: var(--bg-color-primary);
   border: transparent;
   border-radius: 4px;
 }
@@ -74,8 +75,6 @@ body {
   font-size: 14px;
   line-height: 1.14em;
   letter-spacing: 0.02em;
-  color: var(--theme-color);
-  background-color: var(--font-bg-color);
   border-bottom: 1px solid #ececec;
 }
 /* main-nav page header */
@@ -101,7 +100,7 @@ body {
   color: var(--secondary-color);
 }
 .logo-footer {
-  color: var(--font-bg-color);
+  color: var(--bg-color-primary);
 }
 
 /* navbox and authnav in header*/
@@ -128,7 +127,7 @@ body {
 }
 .nav-link:hover,
 .nav-link:focus {
-  color: var(--accent-color);
+  color: var(--accent-color-primary);
 }
 .nav-link.current {
   color: var(--accent-color-primary);
@@ -187,7 +186,7 @@ body {
   font-size: 44px;
   line-height: 1.364em;
   text-transform: uppercase;
-  color: var(--font-bg-color);
+  color: var(--bg-color-primary);
 }
 .hero .button {
   display: inline-block;
@@ -212,7 +211,6 @@ body {
   font-size: 14px;
   line-height: 1.71em;
   letter-spacing: 0.03em;
-  background-color: var(--bg-color-primary);
 }
 .features-list {
   display: flex;
@@ -223,7 +221,7 @@ body {
 .features-item:not(:last-child) {
   margin-right: 30px;
 }
-.thumb {
+.features-item .thumb {
   display: flex;
   height: 120px;
   margin-bottom: 30px;
@@ -286,7 +284,7 @@ body {
 }
 .members-item {
   width: calc((100% - 90px) / 4);
-  background-color: var(--font-bg-color);
+  background-color: var(--bg-color-primary);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -334,7 +332,7 @@ body {
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color-primary);
-  fill: var(--font-bg-color);
+  fill: var(--bg-color-primary);
   border-radius: 50%;
 }
 
@@ -396,7 +394,7 @@ body {
 }
 .filter .button:hover,
 .filter .button:focus {
-  color: var(--font-bg-color);
+  color: var(--bg-color-primary);
   background-color: var(--accent-color-primary);
   box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08),
     0 2px 2px rgba(0, 0, 0, 0.12);
@@ -409,7 +407,6 @@ body {
 /* project item */
 .project-item {
   width: calc((100% - 60px) / 3);
-  background-color: var(--font-bg-color);
 }
 .project-item:not(:nth-child(3n)) {
   margin-right: 30px;
@@ -451,11 +448,11 @@ body {
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: var(--bg-color-add);
+  background-color: var(--bg-color-dark);
 }
 .footer-primery {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 .logo-item {
   display: inline-block;
@@ -470,7 +467,7 @@ body {
   font-size: 14px;
   line-height: 1.71em;
   letter-spacing: 0.03em;
-  color: var(--font-bg-color);
+  color: var(--bg-color-primary);
 }
 .footer-address .address-item:not(:last-child) {
   margin-bottom: 9px;
@@ -487,11 +484,11 @@ body {
   line-height: 1.14em;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--font-bg-color);
+  color: var(--bg-color-primary);
 }
 .social-item .link-item {
   background-color: var(--icon-bg-color);
-  fill: var(--font-bg-color);
+  fill: var(--bg-color-primary);
   border-radius: 50%;
 }
 .social-item .link-item:hover,
